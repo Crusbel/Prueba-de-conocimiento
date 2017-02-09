@@ -1,0 +1,67 @@
+
+
+/*********** nav *************/
+
+nav {
+    background-color: #ffffff;
+    box-shadow: none;
+    color: #000000;
+}
+nav ul li {
+    float: none;
+    display: inline-block;
+    width: 19.555555555555556%;
+    text-align: center;
+}
+nav ul a {
+    transition: none;
+    color: #2196F3;
+}
+nav ul a:hover {
+    background-color: inherit;
+}
+
+/******** mark - nav *******/
+.mark {
+    position: absolute;
+    background: #2196F3;
+    height: 2px;
+    width: 20%;
+    transition: 0.7s;
+}
+.nav-wrapper ul li:nth-child(2):hover ~ .mark {
+    transform: translateX(100%);
+    transition: 0.7s;
+}
+.nav-wrapper ul li:nth-child(3):hover ~ .mark {
+    transform: translateX(200%);
+    transition: 0.7s;
+}
+.nav-wrapper ul li:nth-child(4):hover ~ .mark {
+    transform: translateX(300%);
+    transition: 0.7s;
+}
+.nav-wrapper ul li:nth-child(5):hover ~ .mark {
+    transform: translateX(400%);
+    transition: 0.7s;
+}
+
+/************* slider ***********************/
+
+.camera_pag {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+.camera_wrap .camera_pag .camera_pag_ul {
+    text-align: center;
+}
+.camera_wrap .camera_pag .camera_pag_ul li {
+    background: rgba(255, 255, 255, 0.68);
+}
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span {
+    background: #2196F3;
+}
+
+/************ formulario **************/
+

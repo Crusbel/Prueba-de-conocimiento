@@ -4,6 +4,7 @@
     	<title>Prueba de Conocimiento</title>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
       	<link rel="stylesheet" href="css/materialize.css"/>
+      	<link rel="stylesheet" href="css/camera.css">
       	<link rel="stylesheet" href="css/style.css">
 
       	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,10 +12,113 @@
 
     <body>
 
+		<div class="row">
+			<div class="col l9 m8">
+				<div class="row">
+					<nav>
+						<div class="nav-wrapper">
+							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-list" aria-hidden="true"></i></a>
+							<ul class="hide-on-med-and-down">
+								<li><a href="">Apps</a></li>
+								<li><a href="">Games</a></li>
+								<li><a href="">Movies</a></li>
+								<li><a href="">Books</a></li>
+								<li><a href="">Newspapers</a></li>
+								<div class="mark"></div>
+							</ul>
+							<ul class="side-nav" id="mobile-demo">
+								<li><a href="">Apps</a></li>
+								<li><a href="">Games</a></li>
+								<li><a href="">Movies</a></li>
+								<li><a href="">Books</a></li>
+								<li><a href="">Newspapers</a></li>
+							</ul>
+						</div>
+					</nav>					
+				</div>
+
+			</div>
+			<div class="col l3 m4">
+				<div class="row">
+					<div class="input-field col m12">
+			          <i class="fa fa-search prefix"></i>
+			          <input id="icon_prefix" type="text" class="validate">
+			          <label for="icon_prefix">Search...</label>
+			        </div>					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="myslider camera_azure_skin">
+				<div data-src="http://test.masuno.pe/images/1.jpg" class="responsive-img"></div>
+				<div data-src="http://test.masuno.pe/images/2.jpg" class="responsive-img"></div>
+				<div data-src="http://test.masuno.pe/images/3.jpg" class="responsive-img"></div>
+				<div data-src="http://test.masuno.pe/images/4.jpg" class="responsive-img"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col l4 m4 s12">
+				<div class="card-panel">
+					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+				</div>
+			</div>
+			<div class="col l4 m4 s12">
+				<div class="card-panel">
+					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+				</div>
+			</div>
+			<div class="col l4 m4 s12">
+				<div class="card-panel">
+					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<h4>Formulario</h4>
+		</div>
+
+		<div class="row">
+			<form action="" class="col offset-l4 l4 offset-m3 m6 s12">
+				<div class="row">
+					<div class="input-field col s12">
+					  <input id="username" type="text" class="validate" name="username">
+					  <label for="username">Username</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+					  <input id="email" type="email" class="validate" name="email">
+					  <label for="email">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+					  <input id="password" type="password" class="validate" name="password">
+					  <label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row">
+			        <div class="input-field col s12">
+			          <textarea id="message" class="materialize-textarea" name="message"></textarea>
+			          <label for="message">Write your message</label>
+			        </div>
+			    </div>
+			    <div class="row">
+			    	<button class="btn waves-effect waves-light blue lighten-2 disabled" type="submit" name="action">Send
+					    <i class="fa fa-send-o"></i>
+					</button>
+			    </div>
+			</form>
+		</div>
 
 
-      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      	<script type="text/javascript" src="js/materialize.min.js"></script>
+      	<script type="text/javascript" src="js/camera.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 
     </body>
   </html>
