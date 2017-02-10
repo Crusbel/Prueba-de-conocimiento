@@ -1,16 +1,6 @@
 $(document).ready(function() {
- 	$('.myslider').camera({
- 		height: '40%',
- 		fx: 'mosaicSpiralReverse',
- 		time: 3000,
- 		loader: 'bar',
- 		loaderColor: '#2196F3',
- 		loaderPadding: 0,
- 		loaderBgColor: '#d1eff0',
- 		playPause: false,
-            mobileNavHover: false
- 	});  
       $('.modal').modal();
+      slider_images();
 });
 
 $(".button-collapse").sideNav();
@@ -102,4 +92,28 @@ function clear_input(){
       $('#message').val('');
 }
 
+function slider_images(){
+      $.ajax({
+            type: "GET",
+            url: "http://test.masuno.pe/images.php",
+            data: "data",
+            dataType: "json",
+            success: function (response) {
+                  for (var i = 0; i < response.length; i++) {
+                        $('#myslider').append('<div data-src="'+response[i]+'" class="responsive-img"></div>');
+                  }
+                  $('.myslider').camera({
+                        height: '40%',
+                        fx: 'mosaicSpiralReverse',
+                        time: 3000,
+                        loader: 'bar',
+                        loaderColor: '#2196F3',
+                        loaderPadding: 0,
+                        loaderBgColor: '#d1eff0',
+                        playPause: false,
+                        mobileNavHover: false
+                  });  
+            }
+      });
+}
 
