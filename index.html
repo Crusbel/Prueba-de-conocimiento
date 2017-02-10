@@ -1,6 +1,7 @@
  <!DOCTYPE html>
   <html>
     <head>
+    	<meta charset="utf-8">
     	<title>Prueba de Conocimiento</title>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
       	<link rel="stylesheet" href="css/materialize.css"/>
@@ -13,17 +14,29 @@
     <body>
 
 		<div class="row">
-			<div class="col l9 m8">
+			<div class="col l9 m6 s2">
 				<div class="row">
+					<ul id='dropdown_nav1' class='dropdown-content'>
+						<li><a href="">All</a></li>
+						<li><a href="">Dialed</a></li>
+						<li><a href="">Favorites</a></li>
+						<li><a href="">Groups</a></li>
+  					</ul>
+  					<ul id='dropdown_nav2' class='dropdown-content'>
+						<li><a href="">All</a></li>
+						<li><a href="">Dialed</a></li>
+						<li><a href="">Favorites</a></li>
+						<li><a href="">Groups</a></li>
+  					</ul>
 					<nav>
 						<div class="nav-wrapper">
 							<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-list" aria-hidden="true"></i></a>
-							<ul class="hide-on-med-and-down">
-								<li><a href="">Apps</a></li>
-								<li><a href="">Games</a></li>
-								<li><a href="">Movies</a></li>
-								<li><a href="">Books</a></li>
-								<li><a href="">Newspapers</a></li>
+							<ul class="hide-on-med-and-down nav_desktop">
+								<li><a href="#">Apps</a></li>
+								<li><a href="#">Games</a></li>
+								<li><a href="#" class="dropdown-button" data-activates="dropdown_nav2">Movies</a></li>
+								<li><a href="#">Books</a></li>
+								<li><a href="#" class="dropdown-button" data-activates="dropdown_nav1">Newspapers</a></li>
 								<div class="mark"></div>
 							</ul>
 							<ul class="side-nav" id="mobile-demo">
@@ -38,9 +51,9 @@
 				</div>
 
 			</div>
-			<div class="col l3 m4">
+			<div class="col l3 m6 s10">
 				<div class="row">
-					<div class="input-field col m12">
+					<div class="input-field col m12 s12 content_search">
 			          <i class="fa fa-search prefix"></i>
 			          <input id="icon_prefix" type="text" class="validate">
 			          <label for="icon_prefix">Search...</label>
@@ -59,18 +72,18 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col l4 m4 s12">
+		<div class="row margin40">
+			<div class="col l4 m6 s12">
 				<div class="card-panel">
 					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 				</div>
 			</div>
-			<div class="col l4 m4 s12">
+			<div class="col l4 m6 s12">
 				<div class="card-panel">
 					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 				</div>
 			</div>
-			<div class="col l4 m4 s12">
+			<div class="col l4 m6 s12">
 				<div class="card-panel">
 					<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
 				</div>
@@ -81,33 +94,37 @@
 		</div>
 
 		<div class="row">
-			<form action="" class="col offset-l4 l4 offset-m3 m6 s12">
+			<form action="#" method="post" id="myform" class="col offset-l4 l4 offset-m3 m6 s12" autocomplete="false">
 				<div class="row">
 					<div class="input-field col s12">
-					  <input id="username" type="text" class="validate" name="username">
-					  <label for="username">Username</label>
+						<i class="fa fa-user-o prefix" id="icon_username"></i>
+					  	<input id="username" type="text" name="username">
+					  	<label for="username">Username</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
-					  <input id="email" type="email" class="validate" name="email">
-					  <label for="email">Email</label>
+						<i class="fa fa-envelope-o prefix" id="icon_email"></i>
+					  	<input id="email" type="email" name="email">
+					  	<label for="email">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
-					  <input id="password" type="password" class="validate" name="password">
-					  <label for="password">Password</label>
+						<i class="fa fa-asterisk prefix" id="icon_password"></i>
+					  	<input id="password" type="password" name="password">
+					  	<label for="password">Password</label>
 					</div>
 				</div>
 				<div class="row">
 			        <div class="input-field col s12">
-			          <textarea id="message" class="materialize-textarea" name="message"></textarea>
-			          <label for="message">Write your message</label>
+						<i class="fa fa-comments-o prefix" id="icon_message"></i>
+			          	<textarea id="message" class="materialize-textarea" name="message"></textarea>
+			          	<label for="message">Write your message</label>
 			        </div>
 			    </div>
-			    <div class="row">
-			    	<button class="btn waves-effect waves-light blue lighten-2 disabled" type="submit" name="action">Send
+			    <div class="row center-align">
+			    	<button id="btn_submit" class="btn waves-effect waves-light blue lighten-2 disabled" type="submit">Send
 					    <i class="fa fa-send-o"></i>
 					</button>
 			    </div>
@@ -118,6 +135,7 @@
       	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
       	<script type="text/javascript" src="js/camera.min.js"></script>
+      	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
 
     </body>

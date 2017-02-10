@@ -1,5 +1,10 @@
-
-
+/********** helpers *********/
+.margin40{
+    margin: 0px 40px;
+}
+.invalidColor{
+    color:red !important;
+}
 /*********** nav *************/
 
 nav {
@@ -7,43 +12,68 @@ nav {
     box-shadow: none;
     color: #000000;
 }
-nav ul li {
+nav ul.nav_desktop li {
     float: none;
     display: inline-block;
     width: 19.555555555555556%;
     text-align: center;
 }
-nav ul a {
+nav ul.nav_desktop a {
     transition: none;
     color: #2196F3;
 }
-nav ul a:hover {
+nav ul.nav_desktop a:hover {
     background-color: inherit;
+}
+a.button-collapse i {
+    color: #0071b7;
+    font-size: 2em;
 }
 
 /******** mark - nav *******/
 .mark {
     position: absolute;
     background: #2196F3;
-    height: 2px;
+    height: 1px;
     width: 20%;
     transition: 0.7s;
+    z-index: 6;
+    bottom: 0;
 }
-.nav-wrapper ul li:nth-child(2):hover ~ .mark {
+.nav-wrapper ul.nav_desktop li:nth-child(2):hover ~ .mark {
     transform: translateX(100%);
     transition: 0.7s;
 }
-.nav-wrapper ul li:nth-child(3):hover ~ .mark {
+.nav-wrapper ul.nav_desktop li:nth-child(3):hover ~ .mark {
     transform: translateX(200%);
     transition: 0.7s;
 }
-.nav-wrapper ul li:nth-child(4):hover ~ .mark {
+.nav-wrapper ul.nav_desktop li:nth-child(4):hover ~ .mark {
     transform: translateX(300%);
     transition: 0.7s;
 }
-.nav-wrapper ul li:nth-child(5):hover ~ .mark {
+.nav-wrapper ul.nav_desktop li:nth-child(5):hover ~ .mark {
     transform: translateX(400%);
     transition: 0.7s;
+}
+/*********** dropdown nav **************/
+
+.nav-wrapper ul.nav_desktop li > ul li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.nav-wrapper ul.nav_desktop li > ul li a {
+    width: 100%;
+    display: block;
+    padding-left: 20px;
+}
+.nav-wrapper ul.nav_desktop li > ul li:hover {
+    background: #2196F3;
+    cursor: pointer;
+}
+.nav-wrapper ul.nav_desktop li > ul li:hover a {
+     color: #ffffff; 
 }
 
 /************* slider ***********************/
@@ -62,6 +92,86 @@ nav ul a:hover {
 .camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span {
     background: #2196F3;
 }
+/************** content ***************/
 
-/************ formulario **************/
+.card-panel p {
+    color: #0071b7;
+}
+.card-panel {
+    box-shadow: 0px 0px 8px rgba(33, 150, 243, 0.23);
+}
+h4 {
+    color: #00a567;
+    margin-left: 50px;
+}
 
+/************ form **************/
+
+
+.input-field label {
+    color: #0071b7;
+}
+i.prefix{
+    color: #0071b7;
+}
+.input-field input,
+.input-field textarea.materialize-textarea{
+    color: #00a567;
+    font-weight: bold;
+}
+.input-field input:focus + label,
+.input-field textarea.materialize-textarea:focus + label {
+ color: #00a567;
+}
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field input[type=password],
+.input-field textarea.materialize-textarea{
+    border-bottom: 1px solid #0071b7;
+    box-shadow: none;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus,
+.input-field textarea.materialize-textarea:focus{
+    border-bottom: 1px solid #00a567;
+    box-shadow: none;
+}
+.input-field .prefix.active {
+    color: #00a567;
+}
+label.error {
+    bottom: 0px;
+    position: absolute;
+    top: inherit !important;
+    font-size: 0.7em !important;
+    text-align: right;
+    color: red !important;
+    font-style: italic;
+    transform: inherit !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .margin40{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 601px) {
+    nav .button-collapse{
+        margin: 0;
+    }
+    a.button-collapse i {
+        margin-top: 10px;
+    }
+    .content_search i{
+        display: none;
+    }
+    .content_search input#icon_prefix {
+        margin-left: 0;
+        /* padding-left: 0; */
+        width: 100%;
+    }
+    .content_search label{
+        margin-left: 0 !important;
+    }
+}
