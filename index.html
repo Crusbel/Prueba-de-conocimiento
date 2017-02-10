@@ -17,16 +17,16 @@
 			<div class="col l9 m6 s2">
 				<div class="row">
 					<ul id='dropdown_nav1' class='dropdown-content'>
-						<li><a href="">All</a></li>
-						<li><a href="">Dialed</a></li>
-						<li><a href="">Favorites</a></li>
-						<li><a href="">Groups</a></li>
+						<li><a href="#">All</a></li>
+						<li><a href="#">Dialed</a></li>
+						<li><a href="#">Favorites</a></li>
+						<li><a href="#">Groups</a></li>
   					</ul>
   					<ul id='dropdown_nav2' class='dropdown-content'>
-						<li><a href="">All</a></li>
-						<li><a href="">Dialed</a></li>
-						<li><a href="">Favorites</a></li>
-						<li><a href="">Groups</a></li>
+						<li><a href="#">All</a></li>
+						<li><a href="#">Dialed</a></li>
+						<li><a href="#">Favorites</a></li>
+						<li><a href="#">Groups</a></li>
   					</ul>
 					<nav>
 						<div class="nav-wrapper">
@@ -40,11 +40,27 @@
 								<div class="mark"></div>
 							</ul>
 							<ul class="side-nav" id="mobile-demo">
-								<li><a href="">Apps</a></li>
-								<li><a href="">Games</a></li>
-								<li><a href="">Movies</a></li>
-								<li><a href="">Books</a></li>
-								<li><a href="">Newspapers</a></li>
+								<li><a href="#">Apps</a></li>
+								<li><a href="#">Games</a></li>
+								<li>
+									<a href="#">Movies</a>
+									<ul class='dropdown_nav_mobile'>
+										<li><a href="#">All</a></li>
+										<li><a href="#">Dialed</a></li>
+										<li><a href="#">Favorites</a></li>
+										<li><a href="#">Groups</a></li>
+				  					</ul>
+			  					</li>
+								<li><a href="#">Books</a></li>
+								<li>
+									<a href="#">Newspapers</a>
+									<ul class='dropdown_nav_mobile'>
+										<li><a href="#">All</a></li>
+										<li><a href="#">Dialed</a></li>
+										<li><a href="#">Favorites</a></li>
+										<li><a href="#">Groups</a></li>
+				  					</ul>
+				  				</li>
 							</ul>
 						</div>
 					</nav>					
@@ -55,8 +71,8 @@
 				<div class="row">
 					<div class="input-field col m12 s12 content_search">
 			          <i class="fa fa-search prefix"></i>
-			          <input id="icon_prefix" type="text" class="validate">
-			          <label for="icon_prefix">Search...</label>
+			          <input id="search" type="text">
+			          <label for="search">Search...</label>
 			        </div>					
 				</div>
 
@@ -98,21 +114,21 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="fa fa-user-o prefix" id="icon_username"></i>
-					  	<input id="username" type="text" name="username">
+					  	<input id="username" type="text" name="username" autocomplete="false">
 					  	<label for="username">Username</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="fa fa-envelope-o prefix" id="icon_email"></i>
-					  	<input id="email" type="email" name="email">
+					  	<input id="email" type="email" name="email" autocomplete="false">
 					  	<label for="email">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="fa fa-asterisk prefix" id="icon_password"></i>
-					  	<input id="password" type="password" name="password">
+					  	<input id="password" type="password" name="password" autocomplete="false">
 					  	<label for="password">Password</label>
 					</div>
 				</div>
@@ -131,9 +147,10 @@
 			</form>
 		</div>
 
+		<div id="template_msg" class="modal"></div>
 
       	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-      	<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
       	<script type="text/javascript" src="js/camera.min.js"></script>
       	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>

@@ -10,10 +10,10 @@ $(document).ready(function() {
  		playPause: false,
             mobileNavHover: false
  	});  
+      $('.modal').modal();
 });
 
 $(".button-collapse").sideNav();
-
 $('.dropdown-button').dropdown({
       belowOrigin: true,
       hover: true,
@@ -32,6 +32,59 @@ $('#myform').validate({
             email: { required: "Este campo es requerido", email: "No parece un email" },
             password: { required: "Este campo es requerido", minlength: "Debe contener más de 4 caracteres" },
             message: { required: "Este campo es requerido", minlength: "Debe contener más de 4 caracteres" }
+      },
+      submitHandler: function(){
+
+            var myemail = $('#email').val();
+            var myusername = $('#username').val();
+            var mypassword = $('#password').val();
+            var mymessage = $('#message').val();
+
+            var form = new FormData();
+            form.append("email", myemail);
+            form.append("username", myusername);
+            form.append("password", mypassword);
+            form.append("message", mymessage);
+
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "http://test.masuno.pe/form.php",
+              "method": "POST",
+              "headers": {
+                "authorization": "Basic cHJ1ZWJhOnBydWViYQ==",
+                "cache-control": "no-cache",
+                "postman-token": "464a3f03-3633-5214-c3e6-802b7679165d"
+              },
+              "processData": false,
+              "contentType": false,
+              "mimeType": "multipart/form-data",
+              "data": form,
+              "dataType": "json",
+              "success" : function(response){
+                    if (response.status_code === 0) {
+                         var   template = '<div class="modal-content">';
+                              template +=       '<h4> Success !! <i class="fa fa-smile-o" aria-hidden="true"></i></h4>';
+                              template +=       '<p>Your username :</p><p><span>'+response.data.username+'</span></p>';
+                              template +=       '<p>Your email :</p><p><span>'+response.data.email+'</span></p>';
+                              template +=       '<p>Your password :</p><p><span>'+response.data.password+'</span></p>';
+                              template +=       '<p>Your message :</p><p><span>'+response.data.message+'</span></p>';
+                              template += '</div>';
+                        $('#template_msg').html(template);
+                        $('#template_msg').modal('open');
+                        clear_input();
+                    }
+                    else{
+                         var  tmpl = '<div class="modal-content">';
+                              tmpl +=       '<h5> Houston, we have a problem !! <i class="fa fa-frown-o" aria-hidden="true"></i></h5>';
+                              tmpl += '</div>';
+                        $('#template_msg').html(tmpl);
+                        $('#template_msg').modal('open');
+                        clear_input();
+                    }                    
+              }
+            }
+            $.ajax(settings);
       }
 });
 
@@ -41,3 +94,12 @@ $('#myform').on('keyup blur', function() {
       else
             $('#btn_submit').addClass('disabled');
 });
+
+function clear_input(){
+      $('#username').val('');
+      $('#email').val('');
+      $('#password').val('');
+      $('#message').val('');
+}
+
+
