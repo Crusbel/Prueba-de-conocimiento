@@ -117,3 +117,29 @@ function slider_images(){
       });
 }
 
+
+/**
+ * Filtro de palabras soeces
+ */
+var soeces_array = [];
+
+$.ajax({
+    type: "GET",
+    url: "json/soeces.json",
+    dataType: "json",
+    success: function (response) {
+        soeces_array = response.soeces;
+    }
+});
+
+$('.keyup_input').on('keyup blur',function(){
+    var cont = -1;
+
+    for (var i = 0; i < soeces_array.length; i++) {
+        cont = $(this).val().toLowerCase().indexOf(soeces_array[i]);
+            if (cont >= 0) {
+                $(this).val('');
+                break;
+            } 
+    }
+});
